@@ -109,3 +109,9 @@ tooltip {
 #custom-voxtype.recording {
   color: #a55555;
 }
+
+#language {
+  min-width: 20px;
+  margin: 0 7.5px;
+  font-weight: bold;
+}

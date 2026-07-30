@@ -7,6 +7,7 @@
   "modules-left": ["custom/omarchy", "hyprland/workspaces"],
   "modules-center": ["clock", "custom/weather", "custom/update", "custom/voxtype", "custom/screenrecording-indicator", "custom/idle-indicator", "custom/notification-silencing-indicator"],
   "modules-right": [
+    "hyprland/language",
     "group/tray-expander",
     "bluetooth",
     "network",
@@ -178,5 +179,10 @@
   "tray": {
     "icon-size": 12,
     "spacing": 17
+  },
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "EN",
+    "format-ru": "RU"
   }
 }
