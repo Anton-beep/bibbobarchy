@@ -47,7 +47,8 @@
   margin-right: 17px;
 }
 
-#network {
+#custom-network {
+  min-width: 12px;
   margin-right: 13px;
 }
 

@@ -10,7 +10,7 @@
     "hyprland/language",
     "group/tray-expander",
     "bluetooth",
-    "network",
+    "custom/network",
     "pulseaudio",
     "cpu",
     "battery"
@@ -74,17 +74,20 @@
     "tooltip": false,
     "on-click": "notify-send -u low \"$(omarchy-weather-status)\""
   },
-  "network": {
-    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+  "custom/network": {
     "format": "{icon}",
-    "format-wifi": "{icon}",
-    "format-ethernet": "󰀂",
-    "format-disconnected": "󰤮",
-    "tooltip-format-wifi": "{essid} ({frequency} GHz)",
-    "tooltip-format-ethernet": "Connected",
-    "tooltip-format-disconnected": "Disconnected",
+    "format-icons": {
+      "wifi-0": "󰤯",
+      "wifi-1": "󰤟",
+      "wifi-2": "󰤢",
+      "wifi-3": "󰤥",
+      "wifi-4": "󰤨",
+      "ethernet": "󰀂",
+      "disconnected": "󰤮"
+    },
+    "exec": "$OMARCHY_PATH/default/waybar/indicators/network.sh",
+    "return-type": "json",
     "interval": 3,
-    "spacing": 1,
     "on-click": "omarchy-launch-wifi"
   },
   "battery": {
