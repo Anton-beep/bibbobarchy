@@ -8,4 +8,16 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Duplicated from .config/uwsm/env so SSH works too
 export OMARCHY_PATH=$HOME/.local/share/omarchy
-export PATH=$OMARCHY_PATH/bin:$PATH:$HOME/.local/bin
+# Prepend omarchy bin and ~/.local/bin, but only if not already on PATH so
+# re-sourcing envs (e.g. interactive bashrc after login shell) doesn't pile
+# up duplicate entries. `:` delimiters are added on both ends to match both
+# the first and last PATH entries. Prepend (not append) ~/.local/bin so WSL
+# shims like opencode win over Windows binaries on the inherited Windows PATH.
+case ":$PATH:" in
+  *":$HOME/.local/bin:"*) ;;
+  *) export PATH=$HOME/.local/bin:$PATH ;;
+esac
+case ":$PATH:" in
+  *":$OMARCHY_PATH/bin:"*) ;;
+  *) export PATH=$OMARCHY_PATH/bin:$PATH ;;
+esac

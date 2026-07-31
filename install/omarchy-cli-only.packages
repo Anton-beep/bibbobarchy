@@ -1,0 +1,56 @@
+# Omarchy CLI-only package list for WSL installs
+# Used by install/packaging/all-cli-only.sh
+# Docker engine runs on Windows (Docker Desktop); only the CLI is installed here.
+
+# Shell
+bash-completion
+starship
+zoxide
+tmux
+fzf
+gum
+
+# Files
+eza
+bat
+fd
+ripgrep
+dust
+btop
+less
+plocate
+unzip
+man-db
+
+# Dev
+neovim
+omarchy-nvim
+git
+github-cli
+lazygit
+mise
+jq
+socat
+clang
+llvm
+rust
+ruby
+tree-sitter-cli
+python-terminaltexteffects
+
+# Docker (CLI only; daemon runs on Windows via Docker Desktop)
+docker
+docker-buildx
+docker-compose
+lazydocker
+
+# System
+base
+base-devel
+yay
+inetutils
+inxi
+whois
+expac
+libyaml
+libsecret
