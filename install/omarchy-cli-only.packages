@@ -10,6 +10,9 @@ tmux
 fzf
 gum
 
+# Clipboard
+wl-clipboard
+
 # Files
 eza
 bat
