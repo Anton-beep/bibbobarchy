@@ -198,8 +198,8 @@ export OMARCHY_WSL_INSTALL=1
 export OMARCHY_ONLINE_INSTALL=1
 
 # Install only the stages relevant to WSL CLI environments
-source "$OMARCHY_INSTALL/helpers/all.sh"
+source "$OMARCHY_INSTALL/helpers/logging.sh"
 source "$OMARCHY_INSTALL/preflight/all-wsl.sh"
-source "$OMARCHY_INSTALL/packaging/all-cli-only.sh"
+source "$OMARCHY_INSTALL/hardware/all-cli-only.sh"
 source "$OMARCHY_INSTALL/config/all-cli-only.sh"
 source "$OMARCHY_INSTALL/post-install/all-wsl.sh"

@@ -1,5 +1,5 @@
 # Omarchy CLI-only package list for WSL installs
-# Used by install/packaging/all-cli-only.sh
+# Used by install/hardware/all-cli-only.sh
 # Docker engine runs on Windows (Docker Desktop); only the CLI is installed here.
 
 # Shell
